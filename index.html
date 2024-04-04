@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
+        
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website complete</title>
+        <style>
+            /* CSS for the popup message */
+            .popup {
+              display: none;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+                    /* CSS for the text animation on work images */
+                .work__img p {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                }
+
+                .work__img:hover p {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+           
+
+                    /* CSS for the text style and padding in recommendations */
+                .work__container .work__img p,
+                .work__container .work__img p {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    font-style: italic;
+                    color: #555;
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+          </style>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Sahil Singh</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Project</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Recomendations</a></li>
+                        <li class="nav__item"><a href="../3D-NAVBAR-ANIMATION-master/index.html" class="nav__link">Back</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Sahil Singh</span><br><br>Competitive Programmer <br>with a passion <br>for Algorithms</h1>
+
+                    <a href="#" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="../eps/png/logo-no-background.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="./assets/img/Picsart_22-03-16_00-51-26-588-01.jpeg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Sahil Singh</h2>
+                        <p class="about__text">As a coder and gamer, I effortlessly blend lines of code 
+                            with virtual adventures, embracing the best of both worlds.
+                            From crafting elegant algorithms to conquering digital realms, 
+                            I navigate the delicate balance between
+                            logic and excitement.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        
+                        <div class="container">
+                            <div class="column">
+                              <!-- Technology Stack #1: Languages -->
+                              <div class="tech">
+                                <h2>Languages</h2>
+                                <i class="devicon-python-plain colored"></i>
+                                <i class="devicon-java-plain-wordmark colored"></i>
+                              
+                                <i class="devicon-cplusplus-plain colored"></i>
+                                <i class="devicon-javascript-plain colored"></i>
+                                <p>My favorite languages for systems programming, software engineering, and data analysis.</p>
+                              </div>
+                            </div>
+                          
+                            <div class="column">
+                              <!-- Technology Stack #2: Front-End -->
+                              <div class="tech">
+                                <h2>Front-End</h2>
+                                <i class="devicon-react-original colored"></i>
+                                <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                                <i class="devicon-html5-plain-wordmark colored"></i>
+                                <i class="devicon-css3-plain-wordmark colored"></i>
+                                <p>My preferred technologies for front-end web development and component design.</p>
+                              </div>
+                            </div>
+                          
+                            <div class="column">
+                              <!-- Technology Stack #3: Back-End -->
+                              <div class="tech">
+                                <h2>Back-End</h2>
+                                <i class="devicon-nodejs-plain colored"></i>
+                                <i class="devicon-express-original-wordmark colored"></i>
+                                <i class="devicon-mongodb-plain-wordmark colored"></i>
+                                <i class="devicon-mysql-plain-wordmark colored"></i>
+                                <p>My preferred technologies for back-end web programming and database architecture.</p>
+                              </div>
+                            </div>
+                          
+                            <div class="column">
+                              <!-- Technology Stack #4: Tools -->
+                              <div class="tech">
+                                <h2>Tools</h2>
+                                
+                                <i class="devicon-github-original-wordmark colored"></i>
+                                <i class="devicon-visualstudio-plain colored"></i>
+                                <i class="devicon-github-plain-wordmark colored"></i>
+                                <i class="devicon-vim-plain colored"></i>
+                                <p>My favorite tools for version control, code editing, and container orchestration.</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+    <section class="work section" id="work">
+        <h2 class="section-title">Work</h2>
+        <div class="work__container bd-grid">
+          <a href="" class="work__img">
+            <img src="assets/img/work1.jpg" alt="">
+            <p>Create an immersive web experience with captivating parallax scrolling effects.</p>
+          </a>
+          <a href="" class="work__img">
+            <img src="assets/img/work2.jpg" alt="">
+            <p>A 3D navbar project creates a visually captivating navigation menu with interactive and dynamic elements that provide a unique and immersive user experience.</p>
+          </a>
+          <a href="" class="work__img">
+            <img src="assets/img/work3.jpg" alt="">
+            <p>3D Cyber Face Animation: A cutting-edge project utilizing advanced technologies to create realistic and captivating facial animations in a virtual environment.</p>
+          </a>
+          <a href="" class="work__img">
+            <img src="assets/img/work4.jpg" alt="">
+            <p>A visually stunning 3D card achievement box that showcases accomplishments and adds a dynamic element to the user interface.</p>
+          </a>
+          <a href="" class="work__img">
+            <img src="assets/img/work5.jpg" alt="">
+            <p>A captivating travel website showcasing stunning destinations and providing seamless booking experiences for travelers</p>
+          </a>
+          <a href="" class="work__img">
+            <img src="assets/img/work6.jpg" alt="">
+            <p>Create an immersive 3D contact page with interactive elements for a captivating user experience.</p>
+          </a>
+        </div>
+      </section>
+
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Recomendations</h2>
+
+                <div class="work__container bd-grid">
+                    <a href="" class="work__img">
+                        <p>Showcase your best work: Feature a selection of your most impressive and relevant projects. Choose a variety of projects that highlight your skills and expertise in different areas.</p>
+                    </a>
+                    <a href="" class="work__img">
+                        <p>Highlight your skills and expertise: Create a dedicated section to showcase your skills and areas of expertise. Use visually appealing icons or graphics to represent each skill and provide a brief description of your proficiency.</p>
+                    </a>
+                    <a href="" class="work__img">
+                        <p>Provide clear contact information: Make it easy for visitors to get in touch with you by including clear and easily accessible contact information. Include your email address, phone number, and links to your social media profiles if applicable.</p>
+                    </a>
+                    <a href="" class="work__img">
+                        <p>Use a clean and professional design: Opt for a clean and professional design that reflects your personal brand and is easy to navigate. Choose a color scheme and typography that complement your work and enhance the overall aesthetic appeal.</p>
+                    </a>
+                    <a href="" class="work__img">
+                        <p>Include client testimonials or recommendations: Feature testimonials or recommendations from previous clients or colleagues to build credibility and trust. Highlight positive feedback about your work and professionalism to showcase your reliability and expertise.</p>
+                    </a>
+                    <a href="" class="work__img">
+                        <p>Incorporate a blog or case studies: Include a blog section or case studies where you can share in-depth insights, tutorials, or stories about your projects and experiences. This not only demonstrates your expertise and thought leadership but also engages visitors.</p>
+                    </a>
+                    <a href="" class="work__img">
+                        <p>Include client testimonials or reviews: Adding testimonials or reviews from past clients or employers can be a powerful way to showcase your skills, reliability, and professionalism. Testimonials provide social proof and build trust with potential clients or employers, as they can see the positive experiences others have had working with you.</p>
+                    </a>
+                </div>
+            </section>
+
+           <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Recommendations</h2>
+  
+        <div class="contact__container bd-grid">
+          <form action="#" class="contact__form" id="recommendationForm">
+            <input type="text" placeholder="Name" class="contact__input">
+            <input type="email" placeholder="Email" class="contact__input">
+            <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+            <input type="submit" value="Submit" class="contact__button button">
+          </form>
+        </div>
+      </section>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Sahil Singh</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p class="footer__copy">&#169; JsCoder. All rigths reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+
+        <!-- Popup message -->
+    <div class="popup" id="popupMessage">
+        <p>Recommendation Submitted Successfully</p>
+      </div>
+
+        <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <script>
+      const form = document.getElementById('recommendationForm');
+      const popup = document.getElementById('popupMessage');
+      
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        popup.style.display = 'block';
+        form.reset();
+        
+        setTimeout(() => {
+          popup.style.display = 'none';
+        }, 3000); // Hide the popup after 3 seconds (adjust the duration as needed)
+      });
+    </script>
+    </body>
+</html>
